@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./custom/custom1.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Loan</title>
+</head>
+
+<body>
+  <div class="body" id="app">
+
+
+
+    <nav class="nav navEnd">
+      <div class="pt-0 profile ">
+        <img src="./img/logo.jpeg" class="logo" alt="">
+        <h3 class="profileName">Hellow {{client.firstName}} </h3>
+      </div>
+      <div class="orderButton d-flex align-items-start flex-column ">
+        <div class="mb-auto  nav navTop">
+          <div class="d-flex justify-content-start align-items-center marginNav pt-2">
+            <div class="containerIcon">
+              <svg class="iconsNav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <defs></defs>
+                <g fill="none" fill-rule="evenodd">
+                  <path fill="#000" fill-opacity=".8" fill-rule="nonzero"
+                    d="M12 .4393L22.0607 10.5 21 11.8107l-.7537-.7534.0007 10.6927h-6.7192v-6.7745h-3.0004V21.75H3.751l-.0007-10.6907L3 11.8107 1.9393 10.5 12 .4393zm0 2.3714L5.2503 9.5593 5.251 20.25h3.7764v-6.7745h6.0004V20.25h3.7192l-.0007-10.6927L12 2.8107z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <a class="navLetter" href="./account1.html">Home</a>
+          </div>
+          <div class="d-flex justify-content-start align-items-center marginNav pt-2">
+            <div class="containerIcon">
+              <svg class="iconsNav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <defs></defs>
+                <g fill="none" fill-rule="evenodd">
+                  <path fill="#000" fill-opacity=".8" fill-rule="nonzero"
+                    d="M21 3.75c1.2426 0 2.25 1.0074 2.25 2.25v11.993c0 1.1909-.9252 2.1656-2.096 2.2448l-.1645.0052L.75 20.1488V3.75H21zm0 1.5H2.25v13.4057l18.7465.0873c.4177 0 .7535-.3358.7535-.75l-.001-2.252-5.2655-.015c-1.996-.0058-3.6234-1.5734-3.7263-3.544l-.0052-.1983c0-1.9956 1.5655-3.6254 3.5354-3.7285l.1983-.0052 5.2633-.001L21.75 6a.75.75 0 00-.75-.75zm.749 4.499l-5.2633.001c-1.2336 0-2.2337 1-2.2337 2.2337 0 1.1821.915 2.1511 2.076 2.2363l.1599.006 5.2611.015V9.749zm-2.998 1.4977v1.5h-2.999v-1.5h2.999z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <a class="navLetter" href="./cards1.html">Cards</a>
+          </div>
+          <div class="d-flex justify-content-start align-items-center pt-2 ">
+            <div class="border"></div>
+            <div class="containerIcon">
+              <svg class="iconsNav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <defs></defs>
+                <path fill-opacity=".8" fill="#333" fill-rule="nonzero"
+                  d="M4.95 11.25v1.297l1.747-.5818a6.75 6.75 0 014.5482.1l.2711.1106 3.281 1.4224c.7453.323 1.2331.9939 1.355 1.7408l.418-.187c.8144-.369 1.8937-.8821 3.2249-1.5344 1.201-.5885 2.6518-.0984 3.25 1.0978.5662 1.1325.1499 2.4993-.9258 3.1313l-.1892.1002-8.254 3.9124a3.75 3.75 0 01-3.2525-.0194l-.2017-.1063-3.7794-2.1405a2.25 2.25 0 00-.9152-.2839l-.1936-.0083L4.95 19.3v1.45h-5v-9.5h5zm2.468 2.0627l-.2467.0755-2.2213.7398V17.8l.3838.0009a3.75 3.75 0 011.6334.3744l.2147.1126 3.7793 2.1405a2.25 2.25 0 001.905.1467l.1676-.0713 8.2707-3.9206a.8922.8922 0 00.399-1.197.9355.9355 0 00-1.2483-.4216l-1.4793.7176-1.161.549c-.9706.4514-1.6843.7604-2.1525.931-.5944.7266-1.597 1.03-2.516.7112l-.1462-.0563-4.0747-1.7296.586-1.3808 4.0748 1.7296a.787.787 0 001.032-.4169.799.799 0 00-.3215-.9955l-.0961-.0495-3.281-1.4224a5.25 5.25 0 00-3.5017-.2393zM3.449 12.75h-2v6.5h2v-6.5zm11.4019-11.5c2.8168 0 5.0991 2.283 5.0991 5.1009 0 2.8167-2.2829 5.1009-5.0991 5.1009-2.8165 0-5.1009-2.2844-5.1009-5.101 0-2.817 2.2832-5.1008 5.1009-5.1008zm0 1.5c-1.9892 0-3.6009 1.6122-3.6009 3.6009 0 1.988 1.6128 3.6009 3.6009 3.6009 1.9876 0 3.5991-1.6124 3.5991-3.601 0-1.9895-1.6108-3.6008-3.5991-3.6008z">
+                </path>
+              </svg>
+            </div>
+            <a class="navLetter" href="./accounts1.html">Account</a>
+          </div>
+          <div class="d-flex justify-content-start align-items-center marginNav pt-2">
+            <div class="containerIcon">
+              <svg class="iconsNav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <defs></defs>
+                <path fill="#000" fill-opacity=".8" fill-rule="nonzero"
+                  d="M18.51 18.9167v1.5H1.25v-1.5h17.26zM18.5691 4.25v1.5H2.75v10.244l15.8191.0005v1.5H1.25V4.25h17.3191zm1.8663 2.6292l3.8827 3.8827-3.8827 3.8827-1.0607-1.0606 2.0703-2.073-11.064.001v-1.5l11.065-.001-2.0713-2.0711 1.0607-1.0607z">
+                </path>
+              </svg>
+            </div>
+            <a class="navLetter" href="./transfers.html">Transaction</a>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex justify-content-start align-items-center marginNav pt-2">
+
+            <div class="containerIcon">
+              <svg class="iconsNav" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path fill-opacity=".8"
+                  d="M8.345 4.155h-3.75c-.415 0-.75.336-.75.75v15c0 .415.335.75.75.75h3.75v1.5h-3.75c-1.243 0-2.25-1.007-2.25-2.25v-15c0-1.242 1.007-2.25 2.25-2.25h3.75v1.5zm12.81 8.25l-7.06 7.061-1.061-1.06 5.25-5.25H6.843v-1.5h11.441l-5.251-5.25 1.06-1.061 7.061 7.06z">
+                </path>
+              </svg>
+              <a class="navLetter" v-on:click="exitProfile"> Sign out</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </nav>
+    <div class="main">
+      <header class="header">
+        <h1>your loans</h1>
+      </header>
+      <main class="d-flex justify-content-around" id="main">
+        <div class="pt-3">
+          <section class="form-register ">
+            <h4>the best loans</h4>
+            <form>
+              <p>What loans do you want?:</p>
+              <select class="controls" v-model="idLoan" name="loans" v-on:Change="payment()" id="">
+                <option v-for="(loan, index) in loans" v-bind:value="++index">{{loan.name}}</option>
+              </select>
+              <p>select your type:</p>
+              <select class="controls" v-model="payments" >
+                <option v-for="paymen in filter.payments" v-bind:value="paymen">{{paymen}}</option>
+              </select>
+              <P>indicate the destination account:</P>
+              <select class="controls" v-model="destinationAccount" id="">
+                <option v-for="account in accounts" v-bind:value="account" >{{account.number}}</option>
+              </select>
+
+              <p>select the amount (maximum value)</p>
+              <input type="number" min="0" class="controls" v-bind:placeholder="`$USD `+ (filter.maxAmount ||'---')"
+                v-model="amount">
+              
+              
+              <div >
+                <input type="button" class="btnLogin" v-on:Click="sendLoan" :disabled="payments == '' || amount == '' || destinationAccount == ''" value="SEND" />
+              </div>
+              
+            </form>
+          </section>
+        </div>
+ 
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./JS/loanApplication.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./custom/custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Create Cards</title>
+</head>
+
+<body>
+    <div class="container-fluid body" id="app">
+
+
+        <div class="row" id="header-application">
+            <div class="col-sm-12 col-md-2 fixed-top ">
+                <div class="collapse " id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <h5 class="text-white text-center h4">Your Home Banking</h5>
+                        <span class="text-muted Warning">Toggleable via the navbar brand.</span>
+                        <div class="d-flex flex-column gap-2">
+                            <button class="buttomNav"> Home
+                            </button>
+                            <button class="buttomNav "> Account
+                            </button>
+                            <button class="buttomNav "> Transactions
+                            </button>
+                            <button class="buttomNav" v-on:click="exitProfile"> Sign out
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark bg-dark ">
+                    <div class="container-fluid ">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <p class="text-light m-0">Main</p>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="col-sm-12 col-md-10">
+                <header>
+                    <h1 class="text-center title ">craeate Card</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-md-2">
+                <section class="section">
+                    <h5 class="pt-3"> Contac: +18046978000</h5>
+                    <h5 class="pt-3">Email: <a
+                            href="mailto:Mehomebanking@FederalReserveBank.com">banking@FederalReserveBank.com</a></h5>
+                    <h5 class="pt-5">Address:701 E Byrd St, Richmond, VA 23219, Estados Unidos</h5>
+
+                    <iframe class="pt-3"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.9730072517705!2d-58.37463588423681!3d-34.60484406506571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacd57f91ce9%3A0xefc7d342a78bc306!2sBanco%20Central%20de%20la%20Rep%C3%BAblica%20Argentina!5e0!3m2!1ses-419!2sar!4v1651503789083!5m2!1ses-419!2sar"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </div>
+            <div class="col-sm-9 col-md-10">
+                <form>
+
+                        <label for="">
+                            <input type="radio" name="Card" v-model="type" value="CREDIT" id="CREDIT">CREDIT
+                        </label>
+                        <label for="">
+                            <input type="radio" name="Card" v-model="type" value="DEBIT" id="DEBIT">DEBIT
+                        </label>
+
+
+                        <label for="">
+                            <input type="radio" name="cardColorType" v-model="cardColorType" value="GOLD" id="gold">gold
+                        </label>
+
+                        <label for="">
+                            <input type="radio" name="cardColorType" v-model="cardColorType" value="TITANIUM"
+                                id="titanium">titanium
+                        </label>
+
+                        <label for="">
+                            <input type="radio" name="cardColorType" v-model="cardColorType" value="SILVER"
+                                id="silver">silver
+                        </label>
+                        {{cardColorType}}
+                </form>
+                <button v-on:Click="dataPost">SEND</button>
+            </div>
+        </div>
+
+
+        <footer id="footer" class="d-flex justify-content-between">
+            <div>
+                <p><a class="decorationLink" href="#">Legal</a> </p>
+                <p><a class="decorationLink" href="#">Privacy policy</a> </p>
+                <p><a class="decorationLink" href="#"> coockies policy</a></p>
+                <p><a class="decorationLink" href="#"> Quality Policy</a></p>
+            </div>
+            <div>
+                <h3>Home Banking</h3>
+                <div class="d-flex">
+
+                    <img class="icono" id="image-whatsapp" src="./img/whatsapp.jpeg" alt="">
+                    <img class="icono" src="./img/facebook.jpeg" alt="">
+                </div>
+            </div>
+            <div>
+                <p><a class="decorationLink" href="#"> Blog</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="./JS/createCards.js"></script>
+</body>
+
+</html>
